@@ -1,6 +1,6 @@
 {
   "name": "webpack-entries-autodiscovery",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Entries autodiscovery for webpack",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "dist": "rimraf dist && tsc",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "yarn dist"
   },
   "dependencies": {
     "glob": "7.1.6",
@@ -27,5 +28,9 @@
     "rimraf": "3.0.0",
     "ts-jest": "24.1.0",
     "typescript": "3.7.2"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
