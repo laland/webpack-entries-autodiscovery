@@ -1,0 +1,31 @@
+{
+  "name": "webpack-entries-autodiscovery",
+  "version": "1.0.0",
+  "description": "Entries autodiscovery for webpack",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "laland <laland@ya.ru>",
+  "license": "MIT",
+  "scripts": {
+    "dist": "rimraf dist && tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "glob": "7.1.6",
+    "lodash": "4.17.15",
+    "prettyjson": "1.2.1",
+    "symfony-style-console": "0.4.2"
+  },
+  "devDependencies": {
+    "@types/glob": "7.1.1",
+    "@types/jest": "24.0.23",
+    "@types/lodash": "4.14.149",
+    "@types/mock-fs": "4.10.0",
+    "@types/node": "12.12.11",
+    "jest": "24.9.0",
+    "mock-fs": "4.10.3",
+    "rimraf": "3.0.0",
+    "ts-jest": "24.1.0",
+    "typescript": "3.7.2"
+  }
+}
