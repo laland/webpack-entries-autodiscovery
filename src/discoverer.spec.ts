@@ -1,6 +1,6 @@
 import mockFs from "mock-fs";
 import {Entries, EntriesDirDoesntExist, EntriesDiscoverer} from "./discoverer";
-import {DiscoverEntriesParams} from "./discover-entries-params";
+import {DiscoverEntriesConfig} from "./discover-entries-config";
 
 describe(EntriesDiscoverer.name, () => {
     afterAll(() => mockFs.restore());
@@ -108,7 +108,7 @@ describe(EntriesDiscoverer.name, () => {
             }
         });
 
-        const params = <Partial<DiscoverEntriesParams>>{
+        const params = <Partial<DiscoverEntriesConfig>>{
             basePath: 'fixture',
             entryFilename: 'entry',
             entriesDirName: 'assets/features',
@@ -122,6 +122,6 @@ describe(EntriesDiscoverer.name, () => {
     });
 });
 
-function discoverEntries(params: Partial<DiscoverEntriesParams>): Entries {
-    return new EntriesDiscoverer().discoverEntries(new DiscoverEntriesParams(params));
+function discoverEntries(params: Partial<DiscoverEntriesConfig>): Entries {
+    return new EntriesDiscoverer().discoverEntries(new DiscoverEntriesConfig(params));
 }

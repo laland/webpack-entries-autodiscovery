@@ -1,8 +1,8 @@
-import {DiscoverEntriesParams} from "./discover-entries-params";
+import {DiscoverEntriesConfig} from "./discover-entries-config";
 
-describe(DiscoverEntriesParams.name, () => {
+describe(DiscoverEntriesConfig.name, () => {
     it('has defaults', function () {
-        const params = new DiscoverEntriesParams();
+        const params = new DiscoverEntriesConfig();
 
         expect(params.basePath).toBe('');
         expect(params.entriesDirName).toBe('src');
@@ -11,7 +11,7 @@ describe(DiscoverEntriesParams.name, () => {
     });
 
     it('assepts params hash in constructor', function () {
-        const params = new DiscoverEntriesParams({
+        const params = new DiscoverEntriesConfig({
             basePath: 'fixtures',
             entriesDirName: 'assets',
             entryFilename: 'entry',
@@ -25,6 +25,6 @@ describe(DiscoverEntriesParams.name, () => {
     });
 
     it('returns entriesPath when baseParth is set', function () {
-        expect(new DiscoverEntriesParams({basePath: 'fixtures'}).entriesPath).toBe('fixtures/src')
+        expect(new DiscoverEntriesConfig({basePath: 'fixtures'}).entriesPath).toBe('fixtures/src')
     });
 });

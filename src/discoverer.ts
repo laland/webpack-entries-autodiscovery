@@ -1,13 +1,13 @@
 import {sync as findFilesWithGlob} from 'glob';
 import {existsSync as isFileExists} from 'fs';
 import {dirname} from 'path';
-import {DiscoverEntriesParams} from './discover-entries-params';
+import {DiscoverEntriesConfig} from './discover-entries-config';
 
 export class EntriesDiscoverer
 {
-    private params: DiscoverEntriesParams;
+    private params: DiscoverEntriesConfig;
 
-    discoverEntries(params: DiscoverEntriesParams): Entries
+    discoverEntries(params: DiscoverEntriesConfig): Entries
     {
         this.params = params;
         this.validateConfig();

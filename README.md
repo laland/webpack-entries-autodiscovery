@@ -13,34 +13,16 @@ In your `webpack.config.js`:
 const {discoverEntries} = require('webpack-entries-autodiscovery');
 
 module.exports = {
-  entry: discoverEntries(__dirname) 
+  entry: discoverEntries({
+    basePath: __dirname,
+    entriesDirName: 'assets/features', 
+    entryFilename: 'entry',
+    entryExtensions: ['js', 'ts']
+  }) 
 };
 ```
 
-You can add configuration in `package.json`:
-```json
-{
-  "devDependencies": {
-    "webpack-entries-autodiscovery": "^1.0"
-  },
-  "webpackEntriesAutodiscovery": {
-    "entriesDirName": "assets/features", 
-    "entryFilename": "entry",
-    "entryExtensions": ["js", "ts"]
-  }
-}
-```
-
-When no params is provided in `package.json` - default params will be used:
-```javascript
-{
-    entriesDirName: 'src';
-    entryFilename: 'index';
-    entryExtensions: ['js'];
-}
-```
-
-With that config discoverer will count as entry every `entry` `js` or `ts` file 
+With such config, discoverer will count as entry every `entry` `js` or `ts` file 
 in folder or subfolder of `./assets/features`. Example output:
 ```
 Webpack Entries Autodiscovery
@@ -56,4 +38,14 @@ styleguide:             /var/www/someproject/assets/features/styleguide/entry.ts
                                                                                                                         
 [OK] 4 entries are discovered!                                                                                         
 
+```
+
+When no params is provided - defaults will be used:
+```javascript
+{
+    basePath: '',
+    entriesDirName: 'src', 
+    entryFilename: 'index',
+    entryExtensions: ['js']
+}
 ```

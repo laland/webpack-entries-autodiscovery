@@ -1,6 +1,6 @@
 {
   "name": "webpack-entries-autodiscovery",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Entries autodiscovery for webpack",
   "keywords": ["webpack", "entry", "autodiscovery"],
   "main": "dist/index.js",
@@ -38,6 +38,7 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ]
 }
