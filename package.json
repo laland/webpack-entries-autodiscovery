@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "glob": "7.1.6",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "prettyjson": "1.2.1",
     "symfony-style-console": "0.4.2"
   },
